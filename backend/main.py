@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .database import Base, engine
-from .routes import products, cart, orders
-from .routes import auth
-from .routes import admin
+from backend.database import Base, engine
+from backend.routes import products, cart, orders
+from backend.routes import auth
+from backend.routes import admin
+from backend.security import get_password_hash, verify_password
 
 # Create tables
 Base.metadata.create_all(bind=engine)
