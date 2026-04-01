@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>NEON PRECISION | Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#D4AF37", /* Gold */
+              "primary-container": "#8A6E1D", /* Dark Gold */
+              "on-primary": "#000000",
+              "secondary": "#94A3B8", /* Steel */
+              "surface": "#02040A", /* Deepest Navy */
+              "surface-container": "#0A0F1E", /* Navy */
+              "surface-container-highest": "#1E293B", /* Light Navy */
+              "surface-container-lowest": "#000000",
+              "on-surface": "#F3F4F6",
+              "on-surface-variant": "#9CA3AF",
+              "outline-variant": "#1E293B",
+              "tertiary": "#38BDF8", /* Sky Blue accent */
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl shadow-2xl shadow-primary/10 flex justify-between items-center px-8 py-4 max-w-full mx-auto border-b border-white/5">
+        <div class="flex items-center gap-12">
+            <a href="#" class="text-2xl font-black tracking-tighter text-gradient-gold font-headline uppercase">NEON PRECISION</a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-headline font-bold uppercase tracking-tighter text-primary border-b-2 border-primary pb-1" href="#">Home</a>
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Smartphones</a>
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Audio</a>
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Wearables</a>
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Accessories</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-6">
+            <button class="hover:bg-white/5 transition-all duration-300 p-2 active:scale-95 text-primary">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <button class="hover:bg-white/5 transition-all duration-300 p-2 active:scale-95 text-primary">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </button>
+            <button class="hover:bg-white/5 transition-all duration-300 p-2 active:scale-95 text-primary" onclick="window.location.href='login.html'">
+                <span class="material-symbols-outlined" >account_circle</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden bg-surface-container-lowest">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent z-10"></div>
+            <!-- Original Image, but color graded by CSS overlay -->
+            <img class="w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTv6nrMZMFqTuokpWdqP3cwUA1-PGx7iM64sqqJzHo7OvFOb8T36YQbFLjRnRnKl84wiTPfpcW9C9mG8WB1x0eyIbRdS_z9V9UnFHzw7yQMfuh1WWQ2SRGYkih8BlxgvATvbwC__LDR_fhRu0mxyAWxz661-Aw0FBeq9vVhb2j-wEChw618xIJqSy2BGKRSL-SdsVImMG47GzQBBpMR8Y88vgNZbNdemDL4t9N1bcNMIRAZKrHarknWhcEQcuH2a7pAY2r2-9NSss" alt="Hero Background"/>
+        </div>
+        <div class="relative z-20 px-8 md:px-24 w-full max-w-7xl mx-auto">
+            <div class="max-w-2xl">
+                <span class="inline-block px-3 py-1 bg-surface-container-highest border border-primary/20 text-primary text-[10px] tracking-[0.2em] font-bold uppercase mb-6 neon-glow">PRECISION SERIES X</span>
+                <h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-on-surface mb-8 leading-[0.9]">
+                    Next-Gen Tech at Your <span class="text-gradient-gold">Fingertips</span>
+                </h1>
+                <p class="text-on-surface-variant text-lg md:text-xl max-w-lg mb-12 font-light leading-relaxed">
+                    Experience the architectural evolution of mobile engineering. Designed for the visionaries of tomorrow.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <button class="px-10 py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold uppercase tracking-wider rounded-none hover:scale-105 transition-transform duration-300 neon-glow-btn" onclick="window.location.href='shopping.html'">
+                        Shop Now
+                    </button>
+                    <button class="px-10 py-5 border border-outline-variant/30 text-on-surface font-headline font-bold uppercase tracking-wider rounded-none hover:bg-white/5 transition-all duration-300">
+                        View Deals
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Animated Scroll Indicator -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+            <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Explore</span>
+            <div class="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Flash Deals Section -->
+    <section class="py-24 bg-surface relative overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div>
+                    <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tighter uppercase mb-4">Pulse Deals</h2>
+                    <p class="text-on-surface-variant">Timed precision. Limited availability.</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="glass-panel px-6 py-4 flex flex-col items-center min-w-[80px] border-t-2 border-primary">
+                        <span class="text-3xl font-headline font-bold text-primary">08</span>
+                        <span class="text-[10px] uppercase text-on-surface-variant">HRS</span>
+                    </div>
+                    <div class="glass-panel px-6 py-4 flex flex-col items-center min-w-[80px] border-t-2 border-primary">
+                        <span class="text-3xl font-headline font-bold text-primary">42</span>
+                        <span class="text-[10px] uppercase text-on-surface-variant">MIN</span>
+                    </div>
+                    <div class="glass-panel px-6 py-4 flex flex-col items-center min-w-[80px] border-t-2 border-primary">
+                        <span class="text-3xl font-headline font-bold text-primary">15</span>
+                        <span class="text-[10px] uppercase text-on-surface-variant">SEC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Flash Deal Item 1 -->
+                <div class="group relative bg-surface-container p-8 hover:bg-surface-container-highest transition-all duration-500 overflow-hidden border border-white/5">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="bg-primary text-on-primary font-headline font-black px-3 py-1 text-xs">-35%</span>
+                    </div>
+                    <img class="w-full h-64 object-contain mb-8 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsQQTDyWjqy5t4PQW2A4vkcNKm4DlsdMnX8Mnk_lBkbAgHm0J2fYU5eDYnFQ31yMIjJrJAIN3geJXqtONdo_9nhv6F2Y9d7v6qhmkBiyBJNy3EjNRx6vUs540YIeEI5oAXESelwDgx1H_FDR9qu-MFeb64te-OTem6APWVD-VaLLVHN6MpBPTZ3bjXkc5Ti8K6gYhP08Dx6--inGB6NiX4vD0eU3wHhJgHTisXIEW-yay6qnbXWGYiiV-B7eagmyMibf6WgQS6ek"/>
+                    <h3 class="font-headline text-2xl font-bold mb-2">Sonic Void H1</h3>
+                    <p class="text-on-surface-variant mb-6 text-sm">Active Noise Isolation + 40h Battery</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-primary font-headline text-2xl font-bold">$299.00</span>
+                            <span class="text-on-surface-variant line-through text-xs">$459.00</span>
+                        </div>
+                        <button class="p-3 bg-surface-bright hover:bg-primary hover:text-on-primary transition-colors rounded-sm">
+                            <span class="material-symbols-outlined">add_shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+                 <!-- Flash Deal Item 2 -->
+                 <div class="group relative bg-surface-container p-8 hover:bg-surface-container-highest transition-all duration-500 overflow-hidden border border-white/5">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="bg-primary text-on-primary font-headline font-black px-3 py-1 text-xs">-20%</span>
+                    </div>
+                    <img class="w-full h-64 object-contain mb-8 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX3jR4OHLtf6kJtNNljd0DaNLMYcjLpFdUP0lVkXBu88OfTnFaBgrGB0v25kh67WC3JVxsqx8XmKup9borskX94pIsXy3bAhiIsvIJ3RvICyl_-47HpIuE1N_sRoh6oa0X0dtcqTHbxXAKrEdLjgjaU-MWgduy7-QETgJFvyCzDEGpoNTfMjMyqxxNAsmWakq1mfQqqzZxmSh4lBKOqLloHYw29xfDqjRAtT8Jyp5xjHXK9nvc85G3FzKm1BZAVQ9K9gco2B1dBw0"/>
+                    <h3 class="font-headline text-2xl font-bold mb-2">Chrono Core 2</h3>
+                    <p class="text-on-surface-variant mb-6 text-sm">Biometric Tracking + Solar Charge</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-primary font-headline text-2xl font-bold">$349.00</span>
+                            <span class="text-on-surface-variant line-through text-xs">$429.00</span>
+                        </div>
+                        <button class="p-3 bg-surface-bright hover:bg-primary hover:text-on-primary transition-colors rounded-sm">
+                            <span class="material-symbols-outlined">add_shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+                 <!-- Flash Deal Item 3 -->
+                 <div class="group relative bg-surface-container p-8 hover:bg-surface-container-highest transition-all duration-500 overflow-hidden border border-white/5">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="bg-primary text-on-primary font-headline font-black px-3 py-1 text-xs">-50%</span>
+                    </div>
+                    <img class="w-full h-64 object-contain mb-8 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHF2fuSpQe8toIM8Q_f_3glFAsCfmg1bS9aB9CBgGX7SifVqa0Hg269-dELXYEmoAs-rgdvCdKMaXwmPfUfftFWsNUJ_-yvZPkGVKeEBSG_HAsAQwWO8EAkyyaf6xuCL_XXxagp4vH8Ss2sWmfLrI0H92gWNG1eYo_e7IyOfZa878n01Vt12MEGEvbjBmezs7dNKBHBAJCjvIm90GgIOLu0PFdajf2XC5b3Cp2IuGEyEoCVuM64yael8Jox0LVy7lp-WUSuaCck_s"/>
+                    <h3 class="font-headline text-2xl font-bold mb-2">Volt Hub Pro</h3>
+                    <p class="text-on-surface-variant mb-6 text-sm">100W GaN Fast Charging Station</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-primary font-headline text-2xl font-bold">$49.00</span>
+                            <span class="text-on-surface-variant line-through text-xs">$99.00</span>
+                        </div>
+                        <button class="p-3 bg-surface-bright hover:bg-primary hover:text-on-primary transition-colors rounded-sm">
+                            <span class="material-symbols-outlined">add_shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Grid (Bento Style) -->
+    <section class="py-24 bg-surface-container-lowest">
+        <div class="max-w-[1400px] mx-auto px-8">
+            <h2 class="font-headline text-4xl font-bold tracking-tighter uppercase mb-16 text-center">Architectural Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+                <!-- Smartphones -->
+                <div class="md:col-span-8 md:row-span-1 bg-surface-container group relative overflow-hidden border border-white/5">
+                    <div class="absolute inset-0 z-0">
+                        <img class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCePHIjEAN85Rj-eP7OWqbWDZf6FCpvKrDhM8JEEzq_bv0xVHfBD_hw5XsxW_1tL1_gayfd1huWUkWJflF5PQGKEba9pGvJiN7lxBJtMnEJpxlPuuenbE5dHHKhEvyVoE1UyJi4JA3CFbJAoCNged7XczGQWuhf-K7Ny_f1zJP8y6tEvGfOiVkpNWhPl9W2ZTpui6qiO1FlCBVBX3awPm69Jk8ljTjkFaOPWPDAvfW0YaxFhd1C8OfSguB2V9cOa-2WCd6G6AR8y0U"/>
+                    </div>
+                    <div class="relative z-10 p-12 h-full flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+                        <h3 class="font-headline text-4xl font-bold uppercase mb-2">Smartphones</h3>
+                        <p class="text-on-surface-variant mb-6">The core of your digital identity.</p>
+                        <a class="text-primary font-bold tracking-widest uppercase text-xs flex items-center gap-2 hover:text-white transition-colors" href="#">Explore Series <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                </div>
+                <!-- Earbuds -->
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container group relative overflow-hidden border border-white/5">
+                    <div class="absolute inset-0 z-0">
+                        <img class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC63hyTAZ0mxww-fj6rbQdHnrhWfEVo6sf1fObW4qHza6OOMUpSPr5g9ZIiOTD8TLNYlMTSy8y0jr5BLIZBfUxKnt-aMlfvthig5pd5VQyUEcOGflf5F9LwPhGxnqvuOONU_Qdppy52kSw69a4OLEpSKcGvAwxOUvbnfgNoLn4jIP43o7MXtWTkqv19tXzaLDarxBctNVvAeb48osRny6gDxxVwtOoiDVhVaW9_fdGfJkVsFsU4ZCtfuvSVcP5CHaIbIqWoVAMPVe4"/>
+                    </div>
+                    <div class="relative z-10 p-12 h-full flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+                        <h3 class="font-headline text-2xl font-bold uppercase mb-2">Earbuds/Pods</h3>
+                        <a class="text-primary font-bold tracking-widest uppercase text-xs flex items-center gap-2 hover:text-white transition-colors" href="#">View Audio <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                </div>
+                <!-- Accessories Mix -->
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container group relative overflow-hidden border border-white/5">
+                    <div class="p-12 h-full flex flex-col">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">cable</span>
+                        <h3 class="font-headline text-2xl font-bold uppercase mb-4">Chargers &amp; Cables</h3>
+                        <p class="text-on-surface-variant text-sm mb-auto leading-relaxed">High-fidelity power transfer designed for endurance.</p>
+                        <a class="mt-8 text-on-surface hover:text-primary transition-colors font-bold tracking-widest uppercase text-xs" href="#">Browse Power</a>
+                    </div>
+                </div>
+                <!-- Cases -->
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container group relative overflow-hidden border border-white/5">
+                    <div class="absolute inset-0 z-0">
+                        <img class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdHoSDOL5i7Re-g4anEVh7T4lF_KmBf3PFxVLmeAtoenZ6rXAMw63zADlqoumrFgqiS8tOC2tuYVbJ60OgP-uF4IhSyf5Ua1eMvRLiqu3Iqd2kGN9vXOUyDMtaWQXzA-4l4yjjAF2ovA0znrGNAAuyoViQv8lYlzrgKH3AWJvXFvfMZGDe_rcVZ18yodv2t5tdgKPsE1X2zX6BGoCjbKQ4y0-LSavpoYjSwJzBc00wo8U2hjZ2zDLlBkT-0y1QoOI7Pnzwuhemfrs"/>
+                    </div>
+                    <div class="relative z-10 p-12 h-full flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+                        <h3 class="font-headline text-2xl font-bold uppercase mb-2">Phone Cases</h3>
+                        <a class="text-primary font-bold tracking-widest uppercase text-xs hover:text-white transition-colors">Protection Suite</a>
+                    </div>
+                </div>
+                <!-- Smart Home -->
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container group relative overflow-hidden border border-white/5">
+                    <div class="p-12 h-full flex flex-col">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">nest_remote_comfort_sensor</span>
+                        <h3 class="font-headline text-2xl font-bold uppercase mb-4">Smart Devices</h3>
+                        <p class="text-on-surface-variant text-sm mb-auto">Integrated systems for the modern habitat.</p>
+                        <a class="mt-8 text-on-surface hover:text-primary transition-colors font-bold tracking-widest uppercase text-xs" href="#">Automate Life</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-surface border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <span class="text-primary text-[10px] tracking-[0.3em] font-bold uppercase mb-8 block">Verdicts</span>
+            <div class="relative">
+                <span class="material-symbols-outlined text-8xl text-primary/10 absolute -top-12 -left-12 -z-10">format_quote</span>
+                <p class="text-2xl md:text-3xl font-light leading-relaxed mb-12 text-on-surface-variant">
+                    "Neon Precision doesn't just sell electronics; they sell the future. The design aesthetic matches the quality of the tech perfectly. My Series X is a masterpiece."
+                </p>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-surface-container-highest rounded-none mb-4 overflow-hidden border border-primary/30">
+                        <img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAyjd7PGkd3bkC12iBEiAH83LYJtPpx-GFIzbeOFARtGcPoZ8nUCRZzTzuFFsZtGpgO7Y571WObtr38GMepy8gzfi4_df1JaMOJhuKQRqAL5vT4X22zF0GQHyt3B7KhW9WXq3ACMYwqukPAw0Cah3JBV-s1xS8SyDHteEhmqkv8zDX0yH_gTzHBTqNYopMn40gxaFmNo-Dd9GfauEdeCvkugIWxTpqySCcJO-NzW2Dr_Esj0cFFASbsecyYYIYMeqcz432-DpD_c8"/>
+                    </div>
+                    <span class="font-headline font-bold uppercase tracking-widest text-sm">Marcus Sterling</span>
+                    <span class="text-on-surface-variant text-[10px] uppercase mt-1">Founding Partner, Axiom Tech</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-32 bg-surface-container-lowest relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary rounded-full blur-[160px]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-8 relative z-10 text-center">
+            <h2 class="font-headline text-5xl md:text-6xl font-bold tracking-tighter uppercase mb-8">Join the Vanguard</h2>
+            <p class="text-on-surface-variant text-lg mb-12 max-w-xl mx-auto">Get exclusive access to pre-launches, architectural deep-dives, and limited-edition tech drops.</p>
+            <form class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto" onsubmit="event.preventDefault();">
+                <div class="relative flex-grow">
+                    <input class="w-full bg-surface-container-lowest border-none px-6 py-5 focus:ring-1 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/40 font-headline tracking-widest" placeholder="YOUR_EMAIL_ADDRESS" type="email"/>
+                    <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+                </div>
+                <button class="px-12 py-5 bg-on-surface text-surface-container-lowest font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300" type="submit">
+                    Subscribe
+                </button>
+            </form>
+            <p class="mt-6 text-[10px] text-on-surface-variant/50 uppercase tracking-[0.2em]">Zero noise. Only signal.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface w-full mt-auto border-t border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div class="md:col-span-1">
+                <div class="text-lg font-bold text-primary mb-4 uppercase font-headline tracking-tighter">NEON PRECISION</div>
+                <p class="font-body text-sm tracking-wide text-gray-400 leading-relaxed">
+                    Engineering excellence in the digital age. We curate the pinnacle of technical achievement for those who demand more.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-on-surface font-headline font-bold uppercase text-xs tracking-[0.2em] mb-8">Navigation</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Smartphones</a></li>
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Audio Architecture</a></li>
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Wearable Tech</a></li>
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Custom Builds</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-on-surface font-headline font-bold uppercase text-xs tracking-[0.2em] mb-8">Protocol</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Shipping</a></li>
+                    <li><a class="font-body text-sm tracking-wide text-gray-500 hover:text-primary transition-colors" href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-on-surface font-headline font-bold uppercase text-xs tracking-[0.2em] mb-8">Connect</h4>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest text-on-surface hover:text-primary transition-all active:scale-95" href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest text-on-surface hover:text-primary transition-all active:scale-95" href="#">
+                        <span class="material-symbols-outlined text-sm">share</span>
+                    </a>
+                    <a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest text-on-surface hover:text-primary transition-all active:scale-95" href="#">
+                        <span class="material-symbols-outlined text-sm">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="font-body text-[10px] tracking-[0.3em] text-gray-500 uppercase">© 2024 NEON PRECISION. ARCHITECTED FOR THE FUTURE.</span>
+            <div class="flex gap-8">
+                <span class="material-symbols-outlined text-gray-700">payments</span>
+                <span class="material-symbols-outlined text-gray-700">credit_card</span>
+                <span class="material-symbols-outlined text-gray-700">token</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Center | NEON PRECISION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Custom Scrollbar for Dashboard */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #02040A; }
+        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body flex h-screen overflow-hidden">
+
+    <!-- SIDEBAR -->
+    <aside class="w-72 bg-surface-container border-r border-white/5 flex flex-col shadow-2xl z-20">
+        <!-- Logo -->
+        <div class="h-20 flex items-center px-8 border-b border-white/5">
+            <span class="text-xl font-black tracking-tighter text-gradient-gold font-headline uppercase">NEON ADMIN</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 overflow-y-auto py-6 px-4 space-y-8" id="sidebar-nav">
+            <!-- Links injected by JS -->
+        </nav>
+
+        <!-- User Profile (Bottom) -->
+        <div class="p-4 border-t border-white/5">
+            <div class="flex items-center gap-3 p-3 rounded-sm bg-surface-container-highest border border-white/5">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-black font-bold font-headline">
+                    A
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-on-surface">Admin User</p>
+                    <p class="text-[10px] text-primary uppercase tracking-widest" id="display-role">Level 3: Root</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+        <!-- Header -->
+        <header class="h-20 bg-black/80 backdrop-blur-md border-b border-white/5 flex justify-between items-center px-8 z-10">
+            <h2 class="text-lg font-headline font-medium tracking-tight text-gray-400">Dashboard / <span class="text-white">Overview</span></h2>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-gray-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button class="text-sm font-bold text-red-400 hover:text-red-300 uppercase tracking-widest border border-red-500/30 px-4 py-2 rounded-sm hover:bg-red-500/10 transition-all">
+                    Logout
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto p-8">
+            
+            <!-- Welcome Banner -->
+            <div class="mb-8 p-8 rounded-sm border border-primary/20 bg-gradient-to-r from-surface-container to-surface-container-highest relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full -mr-16 -mt-16 pointer-events-none"></div>
+                <h1 class="text-3xl font-headline font-black uppercase text-white mb-2">Welcome back, Architect.</h1>
+                <p class="text-on-surface-variant max-w-xl">System operational. All clearance protocols are active. Monitoring traffic and inventory integrity.</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12" id="stats-grid">
+                <!-- Stats injected by JS -->
+            </div>
+
+            <!-- Content Area: Product Management (Level 1+) -->
+            <div id="product-section" class="hidden">
+                <div class="flex justify-between items-end mb-6">
+                    <h3 class="text-2xl font-headline font-bold uppercase tracking-tighter">Inventory Database</h3>
+                    <button onclick="toggleAddProductForm()" class="px-6 py-3 bg-primary text-black font-bold font-headline uppercase text-sm rounded-sm hover:bg-white transition-colors flex items-center gap-2">
+                        <span class="material-symbols-outlined">add</span> Add Item
+                    </button>
+                </div>
+
+                <!-- Add Product Form (Hidden by default) -->
+                <div id="add-product-form" class="hidden mb-8 p-6 bg-surface-container border border-primary/30 rounded-sm">
+                    <h4 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">New Entry</h4>
+                    <form id="product-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" id="p-name" placeholder="Product Name" class="bg-surface-container-lowest border border-white/10 p-3 text-sm focus:border-primary outline-none text-white rounded-sm">
+                        <input type="number" id="p-price" placeholder="Price" class="bg-surface-container-lowest border border-white/10 p-3 text-sm focus:border-primary outline-none text-white rounded-sm">
+                        <input type="text" id="p-image" placeholder="Image URL" class="bg-surface-container-lowest border border-white/10 p-3 text-sm focus:border-primary outline-none text-white rounded-sm md:col-span-2">
+                        <select id="p-category" class="bg-surface-container-lowest border border-white/10 p-3 text-sm focus:border-primary outline-none text-white rounded-sm">
+                            <option value="Smartphones">Smartphones</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Wearables">Wearables</option>
+                        </select>
+                        <div class="flex gap-4 justify-end">
+                            <button type="button" onclick="toggleAddProductForm()" class="text-gray-400 hover:text-white text-sm">Cancel</button>
+                            <button type="submit" class="bg-primary text-black px-6 py-2 rounded-sm font-bold text-sm hover:bg-white transition-colors">Save Entry</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Product Table -->
+                <div class="bg-surface-container border border-white/5 rounded-sm overflow-hidden">
+                    <table class="w-full text-left">
+                        <thead class="bg-black/40 text-xs uppercase tracking-widest text-gray-500 font-headline">
+                            <tr>
+                                <th class="p-4">Product</th>
+                                <th class="p-4">Category</th>
+                                <th class="p-4">Price</th>
+                                <th class="p-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table-body" class="divide-y divide-white/5 text-sm">
+                            <!-- Rows injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Restricted Area Message (Level 0) -->
+            <div id="access-denied" class="hidden flex flex-col items-center justify-center h-64 border border-dashed border-white/10 rounded-sm">
+                <span class="material-symbols-outlined text-6xl text-gray-700 mb-4">lock</span>
+                <p class="text-gray-500 font-headline uppercase tracking-widest">Clearance Insufficient</p>
+                <p class="text-xs text-gray-600 mt-2">Level 1 Access Required</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- JAVASCRIPT LOGIC -->
+        <script>
+        const API_URL = "http://localhost:8000";
+        
+        // 1. GET ROLE FROM LOGIN STORAGE
+        const token = localStorage.getItem('neon_token');
+        const rawRole = localStorage.getItem('neon_role');
+        const USER_ROLE = parseInt(rawRole) || 0;
+
+        // 2. SECURITY CHECK: If not logged in, kick out
+        if (!token) {
+            alert("Access Denied. Please Login.");
+            window.location.href = 'login.html';
+        }
+
+        // 3. DYNAMIC ROLE NAMES (For the display text)
+        const roleNames = { 
+            0: "Normal User", 
+            1: "Staff/Editor", 
+            2: "The Boss/Manager", 
+            3: "General Admin" 
+        };
+
+        // 4. DASHBOARD LOGIC
+
+        function initDashboard() {
+            // Update the "Level 3: Root" text dynamically
+            const roleDisplay = document.getElementById('display-role');
+            if(roleDisplay) {
+                roleDisplay.innerText = `Level ${USER_ROLE}: ${roleNames[USER_ROLE]}`;
+            }
+
+            renderSidebar();
+            renderStats();
+            
+            // Check clearance for main content
+            if (USER_ROLE >= 1) {
+                document.getElementById('product-section').classList.remove('hidden');
+                loadProducts();
+            } else {
+                document.getElementById('access-denied').classList.remove('hidden');
+            }
+        }
+
+        function renderSidebar() {
+            const nav = document.getElementById('sidebar-nav');
+            let html = '';
+
+            // Common
+            html += createSidebarLink('dashboard', 'home', 'Overview');
+
+            // Level 1+ (Staff)
+            if (USER_ROLE >= 1) {
+                html += createSidebarLink('products', 'inventory_2', 'Product Management');
+                html += createSidebarLink('orders', 'shopping_bag', 'Order Queue');
+            }
+
+            // Level 2+ (Manager)
+            if (USER_ROLE >= 2) {
+                html += createSidebarLink('revenue', 'trending_up', 'Revenue Analytics');
+                html += createSidebarLink('marketing', 'campaign', 'Marketing');
+            }
+
+            // Level 3+ (Admin)
+            if (USER_ROLE >= 3) {
+                html += createSidebarLink('users', 'admin_panel_settings', 'User Access (RBAC)');
+                html += createSidebarLink('system', 'terminal', 'System Logs');
+            }
+
+            nav.innerHTML = html;
+        }
+
+        function createSidebarLink(id, icon, label) {
+            return `
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-sm text-sm font-medium transition-all duration-200 group text-gray-400 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5">
+                    <span class="material-symbols-outlined text-lg group-hover:text-primary transition-colors">${icon}</span>
+                    ${label}
+                </a>
+            `;
+        }
+
+        function renderStats() {
+            const container = document.getElementById('stats-grid');
+            
+            const stats = [
+                { label: "Total Products", val: "124", icon: "inventory", visible: USER_ROLE >= 1 },
+                { label: "Active Orders", val: "18", icon: "local_shipping", visible: USER_ROLE >= 1 },
+                { label: "Daily Revenue", val: "$4,290", icon: "payments", visible: USER_ROLE >= 2 }, 
+                { label: "System Status", val: "Online", icon: "check_circle", visible: USER_ROLE >= 3 } 
+            ];
+
+            let html = '';
+            stats.forEach(stat => {
+                if(stat.visible) {
+                    html += `
+                        <div class="bg-surface-container p-6 rounded-sm border border-white/5 hover:border-primary/30 transition-colors">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-gray-500 text-xs uppercase tracking-widest font-headline">${stat.label}</span>
+                                <span class="material-symbols-outlined text-primary">${stat.icon}</span>
+                            </div>
+                            <div class="text-2xl font-black font-headline text-white">${stat.val}</div>
+                        </div>
+                    `;
+                }
+            });
+            container.innerHTML = html;
+        }
+
+        function toggleAddProductForm() {
+            const form = document.getElementById('add-product-form');
+            form.classList.toggle('hidden');
+        }
+
+        // --- PRODUCT MANAGEMENT ---
+
+        async function loadProducts() {
+            const tbody = document.getElementById('products-table-body');
+            try {
+                const res = await fetch(`${API_URL}/products`);
+                const products = await res.json();
+                
+                tbody.innerHTML = products.map(p => `
+                    <tr class="group hover:bg-white/5 transition-colors">
+                        <td class="p-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-black rounded-sm overflow-hidden">
+                                    <img src="${p.image}" class="w-full h-full object-cover opacity-80">
+                                </div>
+                                <div>
+                                    <div class="font-bold text-on-surface">${p.name}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="p-4 text-gray-400 text-xs uppercase tracking-wider">${p.category}</td>
+                        <td class="p-4 text-primary font-headline">$${p.price}</td>
+                        <td class="p-4 text-right">
+                            ${USER_ROLE >= 1 ? `
+                                <button class="text-blue-400 hover:text-blue-300 text-xs uppercase font-bold tracking-wider mr-3">Edit</button>
+                                <button onclick="deleteProduct(${p.id})" class="text-red-400 hover:text-red-300 text-xs uppercase font-bold tracking-wider">Delete</button>
+                            ` : '<span class="text-gray-700 text-[10px] uppercase">Restricted</span>'}
+                        </td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                console.error("Failed to load products");
+            }
+        }
+
+        async function createProduct(e) {
+            e.preventDefault();
+            const product = {
+                name: document.getElementById('p-name').value,
+                price: parseFloat(document.getElementById('p-price').value),
+                image: document.getElementById('p-image').value,
+                category: document.getElementById('p-category').value,
+                description: "Admin added product."
+            };
+
+            try {
+                const res = await fetch(`${API_URL}/products`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(product)
+                });
+                if (res.ok) {
+                    alert("Product Added");
+                    toggleAddProductForm();
+                    loadProducts();
+                } else {
+                    alert("Failed to add. Check permissions.");
+                }
+            } catch (e) { console.error(e); }
+        }
+
+        async function deleteProduct(id) {
+            if(!confirm("Delete this item?")) return;
+            await fetch(`${API_URL}/products/${id}`, { method: "DELETE" });
+            loadProducts();
+        }
+
+        document.getElementById('product-form').addEventListener('submit', createProduct);
+
+        // Initialize
+        initDashboard();
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+:root {
+    /* Theme Palette: Black, Navy Blue, Gold */
+    --color-primary: #D4AF37;       /* Metallic Gold */
+    --color-primary-light: #FCD34D; /* Light Gold */
+    --color-primary-dark: #8A6E1D;  /* Dark Gold/Bronze */
+    --color-navy-base: #02040A;     /* Deepest Navy/Black */
+    --color-navy-surface: #0A0F1E;  /* Light Navy Surface */
+    --color-navy-card: #111827;     /* Card Background */
+    --color-text-main: #F3F4F6;     /* Off-white text */
+    --color-text-muted: #94A3B8;    /* Muted text */
+}
+
+/* General Body & Reset */
+body {
+    background-color: var(--color-navy-base);
+    color: var(--color-text-main);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Panel (Navy Edition) */
+.glass-panel {
+    background: rgba(17, 24, 39, 0.7); /* Navy tint */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.1); /* Subtle gold border */
+}
+
+/* Gold Glow Effect (replaces Pink Glow) */
+.neon-glow {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+.neon-glow-btn:hover {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Interactive Inputs */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* Scrollbar Styling for a premium feel */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-navy-base);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-navy-card);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+/* Material Icons Override */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Utility Helper for contrast */
+.text-gold-dim {
+    color: var(--color-primary-dark);
+}

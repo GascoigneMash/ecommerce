@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact | NEON PRECISION</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;500;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#D4AF37", "primary-container": "#8A6E1D", "on-primary": "#000000",
+              "secondary": "#94A3B8", 
+              "surface": "#02040A", "surface-container": "#0A0F1E", "surface-container-highest": "#1E293B",
+              "surface-container-lowest": "#000000", "on-surface": "#F3F4F6", "on-surface-variant": "#9CA3AF",
+              "outline-variant": "#1E293B", "tertiary": "#38BDF8"
+            },
+            fontFamily: { "headline": ["Space Grotesk"], "body": ["Inter"], "label": ["Inter"] },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+    <!-- Top Navigation Shell -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl shadow-2xl shadow-primary/10 border-b border-white/5 flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+        <div class="text-2xl font-black tracking-tighter text-gradient-gold font-headline uppercase">NEON PRECISION</div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Smartphones</a>
+            <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Audio</a>
+            <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Wearables</a>
+            <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Accessories</a>
+        </div>
+        <div class="flex items-center gap-6">
+            <button class="active:scale-95 transition-transform duration-200 text-primary">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <button class="active:scale-95 transition-transform duration-200 text-primary">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </button>
+            <button class="active:scale-95 transition-transform duration-200 text-primary">
+                <span class="material-symbols-outlined">account_circle</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <header class="mb-20 mt-12">
+            <h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9] text-on-background">
+                Initiate<br/>
+                <span class="text-gradient-gold">Connection.</span>
+            </h1>
+            <p class="mt-6 text-on-surface-variant max-w-lg text-lg leading-relaxed">
+                Experience the frontier of precision electronics. Our architects are ready to assist with your technical deployment.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Contact Form Area -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="surface-container p-8 md:p-12 glass-panel rounded-lg shadow-2xl relative overflow-hidden border border-white/5">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full -mr-16 -mt-16"></div>
+                    <form class="space-y-10 relative z-10" onsubmit="event.preventDefault();">
+                        <div class="group">
+                            <label class="block font-label text-xs uppercase tracking-[0.2em] text-secondary mb-3">Operator Name</label>
+                            <input class="w-full bg-surface-container-lowest border-none px-0 py-4 text-on-surface placeholder:text-surface-blight focus:ring-0 focus:outline-none border-b border-white/10 focus:border-primary transition-all duration-500" placeholder="IDENTITY" type="text"/>
+                        </div>
+                        <div class="group">
+                            <label class="block font-label text-xs uppercase tracking-[0.2em] text-secondary mb-3">Data Channel</label>
+                            <input class="w-full bg-surface-container-lowest border-none px-0 py-4 text-on-surface placeholder:text-surface-blight focus:ring-0 focus:outline-none border-b border-white/10 focus:border-primary transition-all duration-500" placeholder="EMAIL@PROTOCOL.COM" type="email"/>
+                        </div>
+                        <div class="group">
+                            <label class="block font-label text-xs uppercase tracking-[0.2em] text-secondary mb-3">Transmission Content</label>
+                            <textarea class="w-full bg-surface-container-lowest border-none px-0 py-4 text-on-surface placeholder:text-surface-blight focus:ring-0 focus:outline-none border-b border-white/10 focus:border-primary transition-all duration-500 resize-none" placeholder="ENTER MESSAGE..." rows="4"></textarea>
+                        </div>
+                        <button class="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-headline font-black uppercase tracking-widest active:scale-95 transition-all duration-300 neon-glow-btn" type="submit">
+                            Transmit Signal
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Side Info Cluster -->
+            <div class="lg:col-span-5 space-y-8">
+                <!-- Location Panel -->
+                <div class="surface-container rounded-lg overflow-hidden group border border-white/5">
+                    <div class="aspect-video relative w-full bg-surface-container-highest grayscale contrast-125 brightness-50 group-hover:grayscale-0 group-hover:brightness-75 transition-all duration-700">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWjnebsIxegK26CQaWcH4HfKDIKLJ-YF2fTB95WB-b_5hPoR3Orck_9WU38ctGf-ogo36lbOGr93pf95HMkkhnkbVKp-ySg64HGSevVM3Xd-noG3Vl2AuVBJjmKfWpF91_DNRJwcrYkWJgedYQuJxVUgTye1M72hDZZN2ctpxcYnxwu2gKTpw37g6mD9NkpkTrbfH1lIuTrMqIHtbJoHh8O8U3wWWOpLoY9RJdryO8rJ9QrrmbXH1CSrQXVhetyl1AEDSR81CcJ_4"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_10px_#38BDF8]"></span>
+                                <span class="font-label text-xs font-bold text-tertiary uppercase tracking-widest">HQ Sector: Online</span>
+                            </div>
+                            <h3 class="font-headline text-2xl font-bold uppercase tracking-tight">Shibuya Digital Hub</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="surface-container-low p-6 rounded-lg hover:bg-surface-container transition-colors duration-300 border border-white/5">
+                        <span class="material-symbols-outlined text-primary mb-4">alternate_email</span>
+                        <h4 class="text-xs uppercase font-label tracking-widest text-on-surface-variant mb-1">Electronic Mail</h4>
+                        <p class="font-headline font-medium">CORE@NEONPRECISION.TECH</p>
+                    </div>
+                    <div class="surface-container-low p-6 rounded-lg hover:bg-surface-container transition-colors duration-300 border border-white/5">
+                        <span class="material-symbols-outlined text-primary mb-4">call</span>
+                        <h4 class="text-xs uppercase font-label tracking-widest text-on-surface-variant mb-1">Voice Link</h4>
+                        <p class="font-headline font-medium">+81 (0) 3-PRECISION</p>
+                    </div>
+                </div>
+
+                <!-- Social Protocols -->
+                <div class="surface-container-low p-8 rounded-lg border border-white/5">
+                    <h4 class="text-xs uppercase font-label tracking-widest text-on-surface-variant mb-6 text-center">Neural Network Nodes</h4>
+                    <div class="flex justify-around items-center">
+                        <a class="group flex flex-col items-center gap-2" href="#">
+                            <div class="w-12 h-12 flex items-center justify-center rounded-sm border border-white/5 bg-surface-container-lowest group-hover:border-primary transition-all duration-300">
+                                <span class="material-symbols-outlined text-on-surface group-hover:text-primary">terminal</span>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">X-LINK</span>
+                        </a>
+                        <a class="group flex flex-col items-center gap-2" href="#">
+                            <div class="w-12 h-12 flex items-center justify-center rounded-sm border border-white/5 bg-surface-container-lowest group-hover:border-primary transition-all duration-300">
+                                <span class="material-symbols-outlined text-on-surface group-hover:text-primary">camera</span>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">INSTA</span>
+                        </a>
+                        <a class="group flex flex-col items-center gap-2" href="#">
+                            <div class="w-12 h-12 flex items-center justify-center rounded-sm border border-white/5 bg-surface-container-lowest group-hover:border-primary transition-all duration-300">
+                                <span class="material-symbols-outlined text-on-surface group-hover:text-primary">brand_awareness</span>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">BEHANCE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full mt-24 border-t border-white/5 bg-surface grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16">
+        <div class="col-span-1 md:col-span-1">
+            <div class="text-lg font-bold text-primary mb-4 font-headline uppercase">NEON PRECISION</div>
+            <p class="font-body text-sm tracking-wide text-gray-500 leading-relaxed">Architecting the future of human-machine interaction through uncompromising design and surgical precision.</p>
+        </div>
+        <div>
+            <h5 class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface mb-6">Network Map</h5>
+            <ul class="space-y-3">
+                <li><a class="font-body text-sm tracking-wide text-gray-400 hover:text-primary transition-colors" href="#">Smartphones</a></li>
+                <li><a class="font-body text-sm tracking-wide text-gray-400 hover:text-primary transition-colors" href="#">Audio</a></li>
+                <li><a class="font-body text-sm tracking-wide text-gray-400 hover:text-primary transition-colors" href="#">Wearables</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface mb-6">Protocols</h5>
+            <ul class="space-y-3">
+                <li><a class="font-body text-sm tracking-wide text-gray-400 hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                <li><a class="font-body text-sm tracking-wide text-gray-400 hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                <li><a class="font-body text-sm tracking-wide text-gray-400 hover:text-primary transition-colors" href="#">Returns</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface mb-6">Transmission</h5>
+            <div class="flex flex-col gap-4">
+                <p class="font-body text-sm tracking-wide text-gray-500">Subscribe for firmware updates.</p>
+                <div class="flex h-10">
+                    <input class="bg-surface-container border-none text-xs px-4 w-full focus:ring-0 border border-white/10 focus:border-primary" placeholder="IDENTITY" type="text"/>
+                    <button class="bg-primary text-on-primary-fixed px-4 active:scale-95 transition-transform border border-primary">
+                        <span class="material-symbols-outlined text-sm">send</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-full pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="font-body text-sm tracking-wide text-gray-500">© 2024 NEON PRECISION. ARCHITECTED FOR THE FUTURE.</span>
+            <div class="flex gap-8">
+                <span class="text-[10px] text-tertiary-fixed-dim uppercase tracking-widest font-bold">System Status: Nominal</span>
+                <span class="text-[10px] text-gray-600 uppercase tracking-widest font-bold">Build: v4.2.0_CONTACT</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

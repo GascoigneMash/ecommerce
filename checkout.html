@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Checkout | NEON PRECISION</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37", "primary-container": "#8A6E1D", "on-primary": "#000000",
+                        "secondary": "#94A3B8", 
+                        "surface": "#02040A", "surface-container": "#0A0F1E", "surface-container-highest": "#1E293B",
+                        "surface-container-lowest": "#000000", "on-surface": "#F3F4F6", "on-surface-variant": "#9CA3AF",
+                        "outline-variant": "#1E293B", "tertiary": "#38BDF8"
+                    },
+                    fontFamily: { "headline": ["Space Grotesk"], "body": ["Inter"], "label": ["Inter"] },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl shadow-2xl shadow-primary/10 border-b border-white/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+            <div class="text-2xl font-black tracking-tighter text-gradient-gold font-headline uppercase">NEON PRECISION</div>
+            <div class="flex items-center gap-6">
+                <a class="text-gray-400 hover:text-primary transition-colors font-headline font-bold uppercase tracking-tighter text-sm" href="cart.html">Cancel</a>
+                <span class="material-symbols-outlined text-primary">shopping_bag</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24 pb-16 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Left Column: Checkout Process -->
+            <div class="lg:col-span-7 space-y-12">
+                <section>
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="font-headline font-bold text-4xl text-primary tracking-tighter">01</span>
+                        <h2 class="font-headline font-bold text-2xl uppercase tracking-widest text-on-surface">Shipping Infrastructure</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-surface-container-low p-8 rounded shadow-inner border border-white/5">
+                        <div class="space-y-1">
+                            <label class="font-label text-xs uppercase tracking-widest text-secondary block">Full Name</label>
+                            <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 transition-all duration-300 border border-white/10 focus:border-primary" placeholder="ARCHITECT NAME" type="text"/>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label text-xs uppercase tracking-widest text-secondary block">Email Protocol</label>
+                            <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 transition-all duration-300 border border-white/10 focus:border-primary" placeholder="USER@NEON.SYS" type="email"/>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label text-xs uppercase tracking-widest text-secondary block">Comm Link (Phone)</label>
+                            <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 transition-all duration-300 border border-white/10 focus:border-primary" placeholder="+1 (555) 000-0000" type="tel"/>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label text-xs uppercase tracking-widest text-secondary block">City Node</label>
+                            <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 transition-all duration-300 border border-white/10 focus:border-primary" placeholder="NEO TOKYO" type="text"/>
+                        </div>
+                        <div class="md:col-span-2 space-y-1">
+                            <label class="font-label text-xs uppercase tracking-widest text-secondary block">Grid Address (Street)</label>
+                            <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 transition-all duration-300 border border-white/10 focus:border-primary" placeholder="SECTOR 7-G, CYBER PLAZA" type="text"/>
+                        </div>
+                        <div class="md:col-span-2 space-y-1">
+                            <label class="font-label text-xs uppercase tracking-widest text-secondary block">Territory (Country)</label>
+                            <select class="w-full bg-surface-container-lowest border-none text-on-surface p-3 rounded-sm focus:ring-0 transition-all duration-300 border border-white/10 focus:border-primary">
+                                <option>United States</option>
+                                <option>Japan</option>
+                                <option>Germany</option>
+                                <option>United Kingdom</option>
+                                <option>Kenya</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="font-headline font-bold text-4xl text-primary tracking-tighter">02</span>
+                        <h2 class="font-headline font-bold text-2xl uppercase tracking-widest text-on-surface">Payment Matrix</h2>
+                    </div>
+                    <div class="space-y-6">
+                        <!-- Card Payment Option -->
+                        <div class="group relative bg-surface-container p-6 border-l-2 border-primary cursor-pointer hover:bg-surface-container-highest transition-all duration-300 border-t border-r border-b border-white/5">
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">credit_card</span>
+                                    <span class="font-headline font-bold tracking-tight">CREDIT / DEBIT ARCHITECTURE</span>
+                                </div>
+                                <div class="flex gap-2 opacity-60">
+                                    <span class="material-symbols-outlined">brand_family</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="col-span-2 space-y-1">
+                                    <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 border border-white/10 focus:border-primary" placeholder="CARD NUMBER" type="text"/>
+                                </div>
+                                <div class="space-y-1">
+                                    <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 border border-white/10 focus:border-primary" placeholder="MM / YY" type="text"/>
+                                </div>
+                                <div class="space-y-1">
+                                    <input class="w-full bg-surface-container-lowest border-none text-on-surface placeholder:text-surface-blight p-3 rounded-sm focus:ring-0 border border-white/10 focus:border-primary" placeholder="CVV" type="text"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Money Option -->
+                        <div class="bg-surface-container-low p-6 flex justify-between items-center group cursor-pointer hover:bg-surface-container transition-all duration-300 border border-white/5">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">phone_iphone</span>
+                                <span class="font-headline font-medium tracking-tight text-secondary group-hover:text-on-surface">MOBILE WALLET / M-PESA</span>
+                            </div>
+                            <span class="material-symbols-outlined text-surface-blight group-hover:text-primary transition-colors">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <div class="lg:col-span-5 sticky top-28">
+                <div class="bg-surface-container-lowest p-8 rounded-sm shadow-2xl border border-white/5">
+                    <h3 class="font-headline font-bold text-xl uppercase tracking-widest mb-8 text-on-surface border-b border-white/5 pb-4">Manifest Summary</h3>
+                    <div class="space-y-6 mb-12">
+                        <!-- Static items for layout, but in a real app, you would fetch cart here too -->
+                        <div class="flex gap-4 items-center">
+                            <div class="w-20 h-20 bg-surface-container p-2">
+                                <img alt="Item" class="w-full h-full object-cover grayscale contrast-125" src="https://via.placeholder.com/100?text=ITEM"/>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="font-headline font-bold text-sm tracking-tight uppercase">Selected Items</p>
+                                <p class="font-label text-[10px] text-primary uppercase">From Your Vault</p>
+                            </div>
+                            <p class="font-headline font-medium text-on-surface" id="checkout-total-display">$0.00</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 font-body text-sm text-on-surface-variant border-t border-white/5 pt-6">
+                        <div class="flex justify-between"><span>Subtotal</span><span id="checkout-subtotal">$0.00</span></div>
+                        <div class="flex justify-between"><span>Quantum Shipping</span><span class="text-tertiary">FREE</span></div>
+                        <div class="flex justify-between"><span>Territory Tax (Estimated)</span><span id="checkout-tax">$0.00</span></div>
+                        <div class="flex justify-between pt-6 border-t border-white/10 font-headline font-bold text-2xl text-on-surface">
+                            <span class="tracking-tighter uppercase">Total</span>
+                            <span class="text-gradient-gold" id="checkout-final-total">$0.00</span>
+                        </div>
+                    </div>
+                    
+                    <!-- THIS BUTTON IS NOW CONNECTED -->
+                    <button onclick="placeOrder()" class="w-full mt-10 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-headline font-black text-lg uppercase tracking-[0.2em] rounded-sm transition-all duration-300 neon-glow-btn active:scale-[0.98]">
+                        Confirm Order
+                    </button>
+                    
+                    <div class="mt-6 flex items-center justify-center gap-2 text-[10px] text-surface-blight font-label uppercase tracking-widest">
+                        <span class="material-symbols-outlined text-[14px]">lock</span>
+                        Encrypted Transaction Protocol Active
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-surface w-full mt-auto border-t border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div class="col-span-1">
+                <div class="text-lg font-bold text-primary mb-4 font-headline uppercase tracking-tighter">NEON PRECISION</div>
+                <p class="font-body text-sm tracking-wide text-gray-400">Architecting the future of human-machine interaction.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIC SCRIPT -->
+    <script>
+        const API_URL = "http://localhost:8000";
+        let currentTotal = 0;
+
+        // Load totals to display in summary
+        async function loadSummary() {
+            // 1. GET TOKEN
+            const token = localStorage.getItem('neon_token');
+            if (!token) {
+                alert("Access Denied. Please Login to proceed.");
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // 2. PREPARE HEADERS
+            const headers = {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            };
+
+            try {
+                // 3. FETCH CART AND PRODUCTS SECURELY
+                const [cartRes, productsRes] = await Promise.all([
+                    fetch(`${API_URL}/cart`, { headers: headers }),
+                    fetch(`${API_URL}/products`, { headers: headers })
+                ]);
+                
+                const cartItems = await cartRes.json();
+                const allProducts = await productsRes.json();
+                
+                let subtotal = 0;
+                cartItems.forEach(item => {
+                    const product = allProducts.find(p => p.id === item.product_id);
+                    if(product) subtotal += product.price * item.quantity;
+                });
+
+                const tax = subtotal * 0.08; // 8% Tax
+                const total = subtotal + tax;
+
+                // 4. UPDATE UI
+                document.getElementById('checkout-subtotal').innerText = "$" + subtotal.toFixed(2);
+                document.getElementById('checkout-tax').innerText = "$" + tax.toFixed(2);
+                document.getElementById('checkout-final-total').innerText = "$" + total.toFixed(2);
+                document.getElementById('checkout-total-display').innerText = "$" + total.toFixed(2);
+                
+                currentTotal = total;
+
+            } catch (e) {
+                console.error("Could not load totals", e);
+                alert("Error loading order details. Please ensure you are logged in.");
+            }
+        }
+
+        async function placeOrder() {
+            const btn = document.querySelector('button[onclick="placeOrder()"]');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "PROCESSING...";
+            btn.disabled = true;
+
+            try {
+                const token = localStorage.getItem('neon_token');
+
+                const response = await fetch(`${API_URL}/order`, {
+                    method: "POST",
+                    headers: { 
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}` // Send token for order
+                    },
+                    body: JSON.stringify({ total: currentTotal })
+                });
+                const data = await response.json();
+                
+                alert("Order Placed Successfully! Order ID: " + data.order_id);
+                window.location.href = "index.html"; 
+            } catch (error) {
+                console.error("Checkout failed", error);
+                alert("Checkout failed. Try again.");
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        // Initialize on load
+        loadSummary();
+    </script>
+</body>
+</html>

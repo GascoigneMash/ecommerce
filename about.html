@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About | NEON PRECISION</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#D4AF37", "primary-container": "#8A6E1D", "on-primary": "#000000",
+              "secondary": "#94A3B8", 
+              "surface": "#02040A", "surface-container": "#0A0F1E", "surface-container-highest": "#1E293B",
+              "surface-container-lowest": "#000000", "on-surface": "#F3F4F6", "on-surface-variant": "#9CA3AF",
+              "outline-variant": "#1E293B", "tertiary": "#38BDF8"
+            },
+            fontFamily: { "headline": ["Space Grotesk"], "body": ["Inter"], "label": ["Inter"] },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl shadow-2xl shadow-primary/10 border-b border-white/5">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+            <div class="text-2xl font-black tracking-tighter text-gradient-gold font-headline uppercase">NEON PRECISION</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Smartphones</a>
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Audio</a>
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Wearables</a>
+                <a class="font-headline font-bold uppercase tracking-tighter text-gray-400 hover:text-primary transition-colors" href="#">Accessories</a>
+            </div>
+            <div class="flex items-center space-x-6 text-primary">
+                <button class="active:scale-95 transition-transform duration-200 hover:bg-white/5 p-2 rounded">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="active:scale-95 transition-transform duration-200 hover:bg-white/5 p-2 rounded">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+                <button class="active:scale-95 transition-transform duration-200 hover:bg-white/5 p-2 rounded">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[819px] flex items-center overflow-hidden px-8 md:px-24">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+                <img alt="Futuristic tech background" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnvF2VCcs9H_muZy5OcWg7olpoQtgWbsFBI63niAllnEachEXiViIyq_U4X2TfVYqGGKSpXb0E7Hu75WoB5fjbqtu-RkCDRlpbJI_3y7ZlBH5f8eXe2MaAViyJu1qKU7rbI4PelQwwYq9wuWZX3iuhrDfACQdW2G1j0RweFGiChACs4hyb2OfDJdWioFoD0X9NOzhIzgxexYqKD9VoMPXvQZ2uPN_m0aZE4ftew_vDqCO_lG2rZ36fNu9OyPxc0X-Fs7K8iSYgu-A"/>
+            </div>
+            <div class="relative z-20 max-w-4xl">
+                <div class="inline-block px-3 py-1 mb-6 rounded-sm bg-primary/10 border border-primary/20">
+                    <span class="text-primary font-headline font-bold uppercase tracking-[0.2em] text-[0.65rem]">Manifesto 01.0</span>
+                </div>
+                <h1 class="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+                    Architecting <br/>
+                    <span class="text-gradient-gold">Tomorrow.</span>
+                </h1>
+                <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+                    At NEON PRECISION, we don't just build electronics. We forge the tools of human evolution. We believe high-end innovation shouldn't be a gatekept luxury, but a precision instrument for every hand.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Bento Grid -->
+        <section class="px-8 md:px-24 py-24 bg-surface-container-lowest">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-7xl mx-auto">
+                <!-- Mission Card -->
+                <div class="md:col-span-7 group bg-surface-container p-12 rounded-sm border border-white/5 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px] group-hover:bg-primary/20 transition-all duration-700"></div>
+                    <div>
+                        <span class="text-primary font-headline font-bold uppercase tracking-widest text-xs mb-4 block">Our Mission</span>
+                        <h2 class="font-headline text-4xl font-bold text-on-surface mb-6 uppercase tracking-tight">The Democratic <br/>Pulse of Innovation.</h2>
+                        <p class="text-on-surface-variant leading-relaxed max-w-md">
+                            To bridge the gap between unattainable sci-fi and daily utility. We engineer hardware that feels like it belongs in the next decade, while ensuring it serves your life today.
+                        </p>
+                    </div>
+                    <div class="mt-12 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-sm bg-surface-bright flex items-center justify-center border border-white/5">
+                            <span class="material-symbols-outlined text-primary">rocket_launch</span>
+                        </div>
+                        <span class="text-sm font-label font-medium uppercase tracking-tighter">Accelerating access</span>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="md:col-span-5 group bg-primary-container p-12 rounded-sm relative overflow-hidden flex flex-col justify-center border border-primary/20">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="relative z-10 text-on-primary-container">
+                        <span class="font-headline font-black uppercase tracking-widest text-xs mb-4 block opacity-60">The Vision</span>
+                        <h2 class="font-headline text-5xl font-black mb-6 leading-none">ZERO <br/>FRICTION.</h2>
+                        <p class="font-medium leading-tight">
+                            A world where technology is an invisible extension of the human will. Seamless, aesthetic, and indestructible.
+                        </p>
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute bottom-0 right-0 p-8 opacity-20 transform group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-9xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    </div>
+                </div>
+
+                <!-- Stats/Philosophy -->
+                <div class="md:col-span-4 bg-surface-container-high p-8 rounded-sm border border-white/5">
+                    <h3 class="font-headline text-2xl font-bold text-primary mb-2">99.9%</h3>
+                    <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-4">Material Integrity</p>
+                    <p class="text-sm text-on-surface-variant">We use aerospace-grade composites in our consumer lineup because quality shouldn't be a compromise.</p>
+                </div>
+                <div class="md:col-span-8 bg-surface p-1 rounded-sm overflow-hidden relative min-h-[300px] border border-white/5">
+                    <img alt="Tech circuitry" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATokHGPKkquhMqYYQZEG8CS9SqkPmQnpbvl_msDhiJxZXC5TtyCE_4Sg8JxMaOf07zRplYQjvjgmLc2E-KpA4LRTuGaTRnh_zh7oLqDgEAyKuH7pR8KFL8uTdyfgtlbO8QooGgjmbOqxmROm7qeMlPd_uDrFB6CwIZRt3OHY3E38DhGDegNohMrXw5h_EteAg7fsEoyEaCq9x-OS2KnjT_eiUBuJkq4dzWwT2hjRlBDVjlhUqRrgrBlB4vwgUeAVFHviCUiIgpUTZg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent flex items-end p-8">
+                        <p class="font-headline font-bold text-xl uppercase tracking-widest">Aesthetics defined by Logic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asymmetric Storytelling Section -->
+        <section class="py-32 px-8 md:px-24">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 blur-[60px] rounded-full"></div>
+                    <div class="relative rounded-sm overflow-hidden border border-white/10 aspect-square">
+                        <img alt="Engineering focus" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE4foUxYT7Z_5-AwCFdmzdrkunDEHnt3eSJ7SRS0D-YhRC2FJuGFMhhHXClcHfS940PJfSEbnCH3F9P_8FlXQkRLNfTaRE06TL_wjt0sEOz_9Hqvsa8y4R9ViAYnvw6uQ6u3OTUcu4uCfGs7tgvMmiHZdnRW7BiJvuH4M_BOHGIgybIcFBfh8n3JDRsy-opFotkUxlRchmlTCG_22B24zi-1JyCIk2StiRouK4T9t1768TvcZPPN-CyZmQhZsxvCmqfjLSK9vBsts"/>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <span class="text-primary font-headline font-bold uppercase tracking-widest text-xs mb-6 block">Precision Culture</span>
+                    <h2 class="font-headline text-5xl font-black mb-8 uppercase tracking-tighter leading-none">Crafting <br/>The Unseen.</h2>
+                    <div class="space-y-6 text-on-surface-variant font-light leading-relaxed">
+                        <p>Our labs are sanctuaries of silence and silicon. We believe the most powerful technology is that which disappears—the curve of an earbud that fits without pressure, the haptic response that mimics real texture.</p>
+                        <p>NEON PRECISION was founded on the radical idea that high-performance electronics should be as expressive as the people who use them. Our "Gold-Tonal" design language isn't just a color choice; it's a statement of energy.</p>
+                    </div>
+                    <div class="mt-12 flex gap-8">
+                        <button class="px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold uppercase tracking-widest text-sm rounded-sm active:scale-95 transition-all neon-glow-btn">
+                            Meet the Team
+                        </button>
+                        <button class="px-8 py-3 border border-primary/30 text-primary font-headline font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-primary/5 transition-all">
+                            Our Process
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The "Future-Luxury" Gallery -->
+        <section class="py-24 bg-surface-container-lowest overflow-hidden">
+            <div class="px-8 md:px-24 mb-16">
+                <h2 class="font-headline text-4xl font-black uppercase tracking-widest text-center">The Artifacts</h2>
+            </div>
+            <div class="flex overflow-x-auto pb-12 gap-8 px-8 md:px-24 scrollbar-hide">
+                <div class="flex-none w-80 md:w-[450px] aspect-[4/5] bg-surface-container relative group overflow-hidden border border-white/5">
+                    <img alt="Product Concept" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeL6bK5NNEyEHKUIGgb41KPGMAfnWfdz5tvZxpa3WIIM_-6KgPyeN4dWLPfL1PlzmQeHjvDY_JS96ZWnyV_0sBryQANjcwYfd75Nn_S0P1DH8teEzIqafzDXnhUsUxmzcFRgOEERxjkTxDYTHmzpr-aaLIxGd9NFuxinn1EQ71TaEQtZpFGRk3qJpke9FWst3y4BbOdd03sbzQPcEn2rAvEEmHku-Gc3ckBt5v-VbOQgUemdXwjbMO3lB_nOVf5U4aqWGE9xTbo7I"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <p class="font-headline text-2xl font-bold uppercase tracking-tighter">Precision Tab Pro</p>
+                        <p class="text-xs text-primary font-bold uppercase tracking-[0.3em]">Concept Stage</p>
+                    </div>
+                </div>
+                <div class="flex-none w-80 md:w-[450px] aspect-[4/5] bg-surface-container relative group overflow-hidden border border-white/5">
+                    <img alt="Audio Evolution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCILAQRnYhmRUk6hzfEgElsyZucaMjmrBviXvjjgPf0g6J-fheD6S9Pk2GUyGaZewsGF9zdaE95sxu7qGfeL8jt2ob33HeRWvkDOloBU5QyE5Hbgwvlv2Jo5G33_Kum6yhXZQn7yW433EavHv7ch0Wc38NCNCdMWuTagizOC8DyJ_RXW_vKnoXOl1Q76b8yCjrD7R29w_DQ-EaDacF28KZEaBnNhbyyFCZRe2d502-A8ec5mec2i1X-nYCchERgPeeKVJ3XZoIaJ30"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <p class="font-headline text-2xl font-bold uppercase tracking-tighter">Sonic Void V.2</p>
+                        <p class="text-xs text-primary font-bold uppercase tracking-[0.3em]">Shipping Now</p>
+                    </div>
+                </div>
+                <div class="flex-none w-80 md:w-[450px] aspect-[4/5] bg-surface-container relative group overflow-hidden border border-white/5">
+                    <img alt="Wearable Architecture" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMUJrUPOnseEe1NZa9vrVXIomgrRRZYQNCo6JgDG_pcZA7TvcBiTqQ-Y31vK-xPQzN0xs6dnjjBGCBp9xSLyQ4UdDIhDzo6a9117SQLsRFFnj2vRr8kyL0CeV5AnApDmrpaszYZUm2hWx5Ca4V97wWc53HUCwjLpRGGAB84UGd_WvehErVebCkbuPQG0ZI65l_6t7aSCrmNIQwBj1HCP__YETnuf6GiNT38CgcdleZKLQURydG3jiaeH1tiXGQKrszGDiDL7v67NM"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <p class="font-headline text-2xl font-bold uppercase tracking-tighter">Chrono-Pulse</p>
+                        <p class="text-xs text-primary font-bold uppercase tracking-[0.3em]">Engineering Alpha</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 px-8 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <h2 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter mb-12">Join The <span class="text-primary italic">Circuit.</span></h2>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <input class="w-full md:w-96 bg-surface-container-lowest border-none p-4 font-headline uppercase tracking-widest text-xs focus:ring-1 focus:ring-primary transition-all border border-white/10 focus:border-primary" placeholder="ENTER COMM-LINK (EMAIL)" type="email"/>
+                    <button class="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold uppercase tracking-widest text-sm rounded-sm hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all">
+                        Connect
+                    </button>
+                </div>
+            </div>
+            <!-- Decorative Background Grid -->
+            <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full mt-auto border-t border-white/5 bg-surface">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div class="col-span-1">
+                <div class="text-lg font-bold text-primary mb-4 font-headline tracking-tighter">NEON PRECISION</div>
+                <p class="font-body text-sm tracking-wide text-gray-400 leading-relaxed">Engineering luxury for the digital nomad. Architecting the future, one pixel at a time.</p>
+            </div>
+            <div>
+                <h4 class="text-primary font-headline font-bold uppercase text-xs tracking-[0.2em] mb-6">Exploration</h4>
+                <ul class="space-y-4 font-body text-sm tracking-wide text-gray-500">
+                    <li><a class="hover:text-primary transition-colors" href="#">Smartphones</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Audio Labs</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Wearables</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-primary font-headline font-bold uppercase text-xs tracking-[0.2em] mb-6">Ecosystem</h4>
+                <ul class="space-y-4 font-body text-sm tracking-wide text-gray-500">
+                    <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Shipping</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-primary font-headline font-bold uppercase text-xs tracking-[0.2em] mb-6">Contact</h4>
+                <div class="flex flex-col space-y-4 font-body text-sm tracking-wide text-gray-500">
+                    <p>HQ: District 01, Neo-Tokyo</p>
+                    <p>comm-link@neonprecision.io</p>
+                    <div class="flex space-x-4 pt-4">
+                        <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer">share</span>
+                        <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer">language</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="font-body text-xs tracking-[0.1em] text-gray-600 uppercase">© 2024 NEON PRECISION. ARCHITECTED FOR THE FUTURE.</span>
+            <div class="flex space-x-8">
+                <span class="text-[0.6rem] font-headline font-black text-gray-700 tracking-[0.5em] uppercase">Built on Precision</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Secure Access | NEON PRECISION</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#D4AF37", "primary-container": "#8A6E1D", "on-primary": "#000000",
+              "secondary": "#94A3B8", 
+              "surface": "#02040A", "surface-container": "#0A0F1E", "surface-container-highest": "#1E293B",
+              "surface-container-lowest": "#000000", "on-surface": "#F3F4F6", "on-surface-variant": "#9CA3AF",
+              "outline-variant": "#1E293B", "tertiary": "#38BDF8"
+            },
+            fontFamily: { "headline": ["Space Grotesk"], "body": ["Inter"], "label": ["Inter"] },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex items-center justify-center relative overflow-hidden">
+    
+    <!-- Background Effects -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-[300px] h-[300px] bg-tertiary/10 blur-[100px] rounded-full pointer-events-none"></div>
+    </div>
+
+    <!-- Login Card -->
+    <div class="relative z-10 w-full max-w-md p-8">
+        <div class="glass-panel p-8 md:p-12 rounded-sm border border-white/10 shadow-2xl relative overflow-hidden">
+            <!-- Decorative top line -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+
+            <!-- Logo -->
+            <div class="text-center mb-10">
+                <h1 class="text-3xl font-black tracking-tighter text-gradient-gold font-headline uppercase mb-2">Neon Precision</h1>
+                <p class="text-on-surface-variant text-xs uppercase tracking-[0.3em] font-medium">Authorized Personnel Only</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-secondary mb-2 font-bold">Identity</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">person</span>
+                        <input type="text" id="username" required class="w-full bg-surface-container-lowest border border-white/10 text-on-surface pl-10 pr-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary/50 outline-none transition-all rounded-sm placeholder:text-gray-700" placeholder="USERNAME">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-secondary mb-2 font-bold">Passcode</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">lock</span>
+                        <input type="password" id="password" required class="w-full bg-surface-container-lowest border border-white/10 text-on-surface pl-10 pr-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary/50 outline-none transition-all rounded-sm placeholder:text-gray-700" placeholder="•••••••••">
+                    </div>
+                </div>
+
+                <div id="error-message" class="hidden text-red-400 text-xs text-center font-bold uppercase tracking-widest bg-red-400/10 py-2 rounded-sm border border-red-400/20">
+                    Invalid Credentials
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-black uppercase tracking-widest text-sm rounded-sm active:scale-[0.98] transition-transform duration-200 neon-glow-btn mt-4 group">
+                    <span class="group-hover:hidden">Authenticate</span>
+                    <span class="hidden group-hover:inline-flex items-center justify-center gap-2">Access Granted <span class="material-symbols-outlined text-sm">check</span></span>
+                </button>
+            </form>
+
+            <div class="mt-8 text-center border-t border-white/5 pt-6">
+                <a href="index.html" class="text-gray-500 hover:text-primary text-xs uppercase tracking-widest transition-colors">
+                    &larr; Return to Storefront
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = "http://localhost:8000";
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('error-message');
+            const btn = document.querySelector('button[type="submit"]');
+
+            // UI Loading State
+            const originalBtnText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Verifying...';
+            btn.disabled = true;
+            errorDiv.classList.add('hidden');
+
+            try {
+                // Send Login Request
+                const formData = new FormData();
+                formData.append('username', username);
+                formData.append('password', password);
+
+                const response = await fetch(`${API_URL}/auth/login`, {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    // STORE TOKEN AND ROLE
+                    localStorage.setItem('neon_token', data.access_token);
+                    localStorage.setItem('neon_role', data.role_level);
+                    
+                    // NEW: REDIRECT BASED ON ROLE
+                    const role = parseInt(data.role_level);
+                    if (role === 0) {
+                        // Normal User -> Go to Storefront
+                        window.location.href = 'index.html';
+                    } else {
+                        // Admin/Staff -> Go to Dashboard
+                        window.location.href = 'admin_dashboard.html';
+                    }
+                } else {
+                    throw new Error('Login failed');
+                }
+            } catch (error) {
+                console.error(error);
+                errorDiv.classList.remove('hidden');
+                btn.innerHTML = originalBtnText;
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
