@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from database import get_db
-from models import Product as ProductModel  # Renamed to ProductModel to avoid confusion
-from schemas import Product, ProductBase    # Make sure we import BOTH schemas
-from security import require_role
+from .database import get_db
+from .models import Product as ProductModel  # Renamed to ProductModel to avoid confusion
+from .schemas import Product, ProductBase    # Make sure we import BOTH schemas
+from .security import require_role
 
 router = APIRouter()
 
